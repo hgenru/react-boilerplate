@@ -21,3 +21,11 @@
 :global body {
     margin: 0;
 }
+
+:root {
+  --mainColor: red;
+}
+
+a {
+  color: var(--mainColor);
+}

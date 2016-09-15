@@ -6,7 +6,7 @@
     "start": "NODE_ENV=production node_modules/.bin/webpack && NODE_ENV=production node server/server",
     "test": "node_modules/.bin/mocha -R spec ./server/**/test-*.js",
     "build": "NODE_ENV=production node_modules/.bin/webpack",
-    "dev": "NODE_ENV=development node server/server"
+    "dev": "NODE_ENV=development node_modules/.bin/webpack-dashboard -- node server/server"
   },
   "repository": {
     "type": "git",
@@ -43,7 +43,6 @@
     "webpack-hot-middleware": "^2.10.0"
   },
   "devDependencies": {
-    "autoprefixer": "^6.3.6",
     "babel": "^6.5.2",
     "babel-core": "^6.9.1",
     "babel-loader": "^6.2.4",
@@ -72,6 +71,7 @@
     "supertest": "^2.0.0",
     "supertest-as-promised": "^3.1.0",
     "webpack": "^2.1.0-beta.22",
+    "webpack-dashboard": "^0.1.8",
     "webpack-dev-middleware": "^1.6.1",
     "webpack-hot-middleware": "^2.10.0"
   }

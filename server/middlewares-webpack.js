@@ -3,7 +3,9 @@ const webpack = require('webpack');
 const PassThrough = require('stream').PassThrough;
 
 const webpackConfig = require('../webpack.config');
+const DashboardPlugin = require('webpack-dashboard/plugin');
 const compiler = webpack(webpackConfig);
+compiler.apply(new DashboardPlugin());
 const webpackHotMiddleware = require('webpack-hot-middleware')(compiler);
 const webpackDevMiddleware = require('webpack-dev-middleware')(
     compiler,
